@@ -1,5 +1,4 @@
-//2Áø¼ö º¯È¯ÇÏ±â
-#include <stdio.h>
+/*#include <stdio.h>
 
 int main()
 {
@@ -22,4 +21,30 @@ int main()
 	}
 
 	printf("%d", binary);
+}*/
+
+#include <stdio.h>
+
+void changetobinary(int num)
+{
+	if (num == 0 || num == 1) {
+		printf("%d", num);
+	}
+	else {
+		changetobinary(num / 2);
+		printf("%d", num % 2);
+	}
+	return 0;
+}
+
+int main()
+{
+	int n;
+
+	printf("Please enter a number: ");
+	scanf("%d", &n);
+
+	changetobinary(n);
+
+	return 0;
 }
